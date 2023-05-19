@@ -3,8 +3,10 @@ import styles from './counter.module.css'
 
 export default function CounterComp() {
   return (
-    <div className={`${styles.color}`}>
-        <h3>{styles.color}</h3>
+    <div>
+        <h3 className={`${styles.color} ${styles.font}`}>
+            {styles.color}
+        </h3>
     </div>
   )
 }

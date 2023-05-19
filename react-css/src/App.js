@@ -1,16 +1,18 @@
+import logo from './logo.svg';
 import './App.css';
-import CounterComp from './features/counter/CounterComp';
-import InputForm from './features/inputform/InputForm';
-import StyleComp from './features/styleComponent/StyleComp';
 
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './page/Home';
+import About from './page/About';
 
 function App() {
   return (
-    <div className="App">
-      <CounterComp/>
-      <InputForm/>
-      <StyleComp>Styled Component</StyleComp>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/about' element={<About />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
